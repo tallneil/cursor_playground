@@ -1,0 +1,16 @@
+html, body {
+  background: #000000;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.g-container {
+  margin: 40px;
+  width: 40vw;
+}
+
+.g-row {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  margin: 24px 0;
+}
