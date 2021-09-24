@@ -23,11 +23,18 @@ html, body {
 .g-row {
   display: grid;
   grid-template-columns: 5fr 1fr;
-  padding: 16px 0;
 }
 
 .g-row:hover {
   cursor: pointer;
+}
+
+.svg-arrow, .g-row-text {
+  padding: 20px;
+}
+
+.magnet {
+  transition: translate 0.1s ease-out;
 }
 
 .cursor {
