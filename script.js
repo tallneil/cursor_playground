@@ -11,14 +11,9 @@ var cursor_a = obj.opacity;
 function makeControls() {
   gui = new dat.gui.GUI();
   gui.remember(obj);
-  
   gui.add(obj, 'radius').min(10).max(120).step(1).onChange(newValue => {cursor_r = newValue});
   gui.add(obj, 'opacity').min(0).max(1).step(0.01).onChange(newValue => {cursor_a = newValue});
-  gui.add(obj, 'magnet').min(0).max(1).step(0.01).onChange(newValue => {changeIntensity(0, newValue)});
-}
-
-function changeIntensity(m) {
-
+  gui.add(obj, 'magnet').min(0).max(1).step(0.01);
 }
 
 function handleCursor() {
