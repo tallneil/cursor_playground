@@ -12,29 +12,25 @@ html, body {
 	font-family: "Sora", sans-serif;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .g-container {
-  margin: 10vh auto;
-  width: 50vw;
-  max-width: 600px;
-}
-
-.g-row {
+  margin: 45vh auto;
   display: grid;
-  grid-template-columns: 5fr 1fr;
-}
-
-.g-row:hover {
-  cursor: pointer;
-}
-
-.svg-arrow, .g-row-text {
-  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 40vw;
+  max-width: 480px;
+  text-align: center;
 }
 
 .magnet {
-  transition: translate 0.1s ease-out;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
 }
 
 .cursor {
