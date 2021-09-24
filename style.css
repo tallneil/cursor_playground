@@ -23,7 +23,11 @@ html, body {
 .g-row {
   display: grid;
   grid-template-columns: 5fr 1fr;
-  margin: 32px 0;
+  padding: 16px 0;
+}
+
+.g-row:hover {
+  cursor: pointer;
 }
 
 .cursor {
