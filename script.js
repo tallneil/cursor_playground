@@ -17,6 +17,7 @@ function makeControls() {
 }
 
 function handleCursor() {
+  cursor = $(".cursor")[0];
   var buttons = document.getElementsByClassName("magnet");
   for (let b of buttons) {
     b.onmousemove = function(e) {
@@ -43,8 +44,19 @@ document.addEventListener("mousemove", function(e) {
   cursor.style.opacity = cursor_a;
 });
 
+function handleTooltips() {
+  for (var link of document.getElementsByClassName("g-row-text")) {
+    link.onmousemove = function(e) {
+      var elCoords = this.getBoundingClientRect();
+      var xOffset = e.clientX - elCoords.left - 120;
+      var yOffset = e.clientY - elCoords.top - 60;
+      this.querySelector(".tooltip").style.transform = "translate(" + xOffset + "px, " + yOffset + "px)";
+    }
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function(e) {
   makeControls();
-  cursor = $(".cursor")[0];
   handleCursor();
+  handleTooltips();
 });

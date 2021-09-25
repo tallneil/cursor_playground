@@ -17,7 +17,7 @@ html, body {
   left: 0;
 }
 
-.g-container {
+.m-container {
   margin: 45vh auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -33,8 +33,47 @@ html, body {
   transition: transform 0.1s ease-out;
 }
 
+.g-container {
+  margin: 45vh auto;
+  width: 40vw;
+  max-width: 480px;
+}
+
+.g-row {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  cursor: pointer;
+}
+
+.g-row-text {
+  padding: 16px;
+}
+
 .cursor {
   display: none;
+}
+
+a {
+  display: block;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a span.tooltip {
+  display: none;
+  opacity: 0;
+}
+
+a:hover span.tooltip {
+  display: inline;
+  position: absolute; 
+  overflow: hidden;
+  font-size: 10px;
+  opacity: 0.8;
+  transition: all 100ms ease-out; 
 }
 
 @media (any-pointer: fine) {
