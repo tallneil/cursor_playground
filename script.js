@@ -16,6 +16,7 @@ function makeControls() {
   gui.add(obj, 'magnet').min(0).max(1).step(0.01);
 }
 
+// reference: https://codepen.io/ShadiMuma/pen/JxqBbE
 function handleCursor() {
   cursor = $(".cursor")[0];
   var buttons = document.getElementsByClassName("magnet");
